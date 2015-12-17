@@ -54,23 +54,28 @@ echo $dtBerlin . "\n";
 echo (int)$dtBerlin->isLeapYear() . "\n";
 
 // is* range of functions test
-printf("Is yesterday? %s\n", ($dtBerlin->isYesterday()) ? "yes" : "no");
-printf("Is a Thursday? %s\n", ($dtBerlin->isThursday()) ? "yes" : "no");
-printf("Is in the future? %s\n", ($dtBerlin->isFuture()) ? "yes" : "no");
-printf("Is a leap year? %s\n", ($dtBerlin->isLeapYear()) ? "yes" : "no");
+echo "Is yesterday? "
+   . ($dtBerlin->isYesterday() ? "yes" : "no") . PHP_EOL;
+echo "Is a Thursday? "
+   . ($dtBerlin->isThursday() ? "yes" : "no") . PHP_EOL;
+echo "Is in the future? "
+   . ($dtBerlin->isFuture() ? "yes" : "no") . PHP_EOL;
+echo "Is a leap year? "
+   . ($dtBerlin->isLeapYear() ? "yes" : "no") . PHP_EOL;
 
 // first and last of the month
-printf("First of the month %s\n", $dtBerlin->firstOfMonth());
-printf("Last of the month %s\n", $dtBerlin->lastOfMonth());
+echo "First of the month " . $dtBerlin->firstOfMonth() . PHP_EOL;
+echo "Last of the month " . $dtBerlin->lastOfMonth() . PHP_EOL;
 
 // nthOf* function test
-printf("Start of the month %s\n", $dtBerlin->startOfMonth());
-printf("End of the month %s\n", $dtBerlin->endOfMonth());
-printf("End of the decade %s\n", $dtBerlin->endOfDecade());
+echo "Start of the month ", $dtBerlin->startOfMonth() . PHP_EOL;
+echo "End of the month ", $dtBerlin->endOfMonth() . PHP_EOL;
+echo "End of the decade ", $dtBerlin->endOfDecade() . PHP_EOL;
 
 // Date manipulation
-print $dtBerlin->addHours(5)->addDays(2)->addWeeks(1)->addMonths(3);
-print $dtBerlin->subMonths(8)->subHours(7);
+echo $dtBerlin->addHours(5)->addDays(2)
+         ->addWeeks(1)->addMonths(3) . PHP_EOL;
+echo $dtBerlin->subMonths(8)->subHours(7) . PHP_EOL;
 
 // Find UK Bank Holidays
 $dtLondon = CitcoCarbon::today('Europe/London');
